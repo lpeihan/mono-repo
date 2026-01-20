@@ -18,6 +18,11 @@ import { useI18n } from 'vue-i18n';
 import { ModalManager } from './components';
 import { getAntdLocale } from './locales';
 import { useThemeStore } from './stores';
+import { eventBus } from './utils';
+
+eventBus.on('refresh', () => {
+  state.key++;
+});
 
 const { useToken } = theme;
 

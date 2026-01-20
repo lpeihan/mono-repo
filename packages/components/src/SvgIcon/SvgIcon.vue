@@ -44,8 +44,8 @@ const iconStyle = computed<CSSProperties>(() => ({
 <style scoped>
 .svg-icon {
   display: inline-block;
-  vertical-align: middle;
-  fill: currentColor;
   overflow: hidden;
+  vertical-align: middle;
+  fill: currentcolor;
 }
 </style>

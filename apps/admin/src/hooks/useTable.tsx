@@ -84,7 +84,7 @@ export const useTable = (options) => {
     }
   };
 
-  const handleChangeTable = (page, filters, sorter) => {
+  const handleChangeTable = (page, _filters, sorter) => {
     pagination.value.current = page.current;
     pagination.value.pageSize = page.pageSize;
 
