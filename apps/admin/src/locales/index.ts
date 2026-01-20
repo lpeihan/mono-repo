@@ -5,7 +5,7 @@ import { createI18n } from 'vue-i18n';
 import 'dayjs/locale/zh-cn';
 import 'dayjs/locale/en';
 
-import { storage } from '../utils';
+import { storage } from '@/utils/storage';
 
 import zhCN from './zh-CN';
 
@@ -59,25 +59,6 @@ function getDayjsLocale(locale) {
   return dayjsLocales[locale];
 }
 
-function setupLocale() {
-  const locale = getLocale();
-
-  const i18n = createI18n({
-    legacy: false,
-    locale,
-    fallbackLocale: DEFAULT_LANG,
-    messages: {
-      'zh-CN': { ...zhCN },
-    },
-  });
-
-  setLocale(locale);
-
-  return i18n;
-}
-
-export const i18n = setupLocale();
-
 const localeModules = import.meta.glob<{ default: Record<string, string> }>('./*.ts', {
   eager: false,
 });
@@ -103,6 +84,17 @@ async function setLocale(locale) {
   i18n.global.locale.value = locale;
   dayjs.locale(getDayjsLocale(locale));
 }
+
+export const i18n = createI18n({
+  legacy: false,
+  locale: getLocale(),
+  fallbackLocale: DEFAULT_LANG,
+  messages: {
+    'zh-CN': { ...zhCN },
+  },
+});
+
+setLocale(getLocale());
 
 export function changeLocale(locale) {
   setLocale(locale);

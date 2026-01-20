@@ -1,9 +1,6 @@
 <script setup lang="ts">
-import { add } from '@mono/utils';
-
 import HelloWorld from './components/HelloWorld.vue';
 
-const result = add(1, 2);
 </script>
 
 <template>
@@ -15,7 +12,6 @@ const result = add(1, 2);
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
     </a>
   </div>
-  <p>H5: 1 + 2 = {{ result }}</p>
   <HelloWorld msg="Vite + Vue" />
 </template>
 

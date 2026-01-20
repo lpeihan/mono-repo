@@ -33,11 +33,13 @@ export default [
   {
     url: '/mock/user/info',
     method: 'get',
-    response: () => ({
-      code: CODE_SUCCESS,
-      data: getUserData(),
-      message: 'success',
-    }),
+    response: () => {
+      return {
+        code: CODE_SUCCESS,
+        data: getUserData(),
+        message: 'success',
+      };
+    },
   },
   {
     url: '/mock/user/list',
