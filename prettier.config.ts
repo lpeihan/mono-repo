@@ -1,4 +1,6 @@
-export default {
+import { type Config } from 'prettier';
+
+const config: Config = {
   plugins: ['prettier-plugin-tailwindcss'],
   printWidth: 100,
   trailingComma: 'all',
@@ -8,3 +10,5 @@ export default {
   endOfLine: 'auto',
   htmlWhitespaceSensitivity: 'ignore',
 };
+
+export default config;
