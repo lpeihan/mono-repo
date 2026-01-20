@@ -1,4 +1,4 @@
-import ComponentsPlugin from '@mono/components';
+import GlobalComponentsPlugin from '@mono/components';
 import Antd from 'ant-design-vue';
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';
@@ -17,7 +17,7 @@ import './styles/tailwind.css';
 const pinia = createPinia();
 const app = createApp(App);
 
-app.use(Antd).use(i18n).use(pinia).use(router).use(ComponentsPlugin);
+app.use(Antd).use(i18n).use(pinia).use(router).use(GlobalComponentsPlugin);
 
 const themeStore = useThemeStore();
 themeStore.initTheme();
