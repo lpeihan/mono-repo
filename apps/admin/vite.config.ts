@@ -30,4 +30,18 @@ export default defineConfig({
   server: {
     port: 6002,
   },
+  build: {
+    rolldownOptions: {
+      output: {
+        advancedChunks: {
+          groups: [
+            {
+              test: /node_modules/,
+              name: 'vendors',
+            },
+          ]
+        }
+      }
+    }
+  }
 });
