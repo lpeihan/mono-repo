@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { SvgIcon } from '@mono/components'
 import { add } from '@mono/utils'
+
 import HelloWorld from './components/HelloWorld.vue'
 
 const result = add(10, 20)

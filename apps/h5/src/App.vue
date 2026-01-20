@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { add } from '@mono/utils'
+
 import HelloWorld from './components/HelloWorld.vue'
 
 const result = add(1, 2)
