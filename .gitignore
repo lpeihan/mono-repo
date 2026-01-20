@@ -5,7 +5,3 @@ dist
 *.local
 
 .turbo
-
-.vscode/*
-.idea
-.DS_Store

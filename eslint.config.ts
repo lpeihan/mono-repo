@@ -2,7 +2,7 @@ import js from '@eslint/js';
 import { defineConfig } from 'eslint/config';
 import prettier from 'eslint-config-prettier';
 import importPlugin from 'eslint-plugin-import';
-import pluginVue from 'eslint-plugin-vue';
+import pluginVue from 'eslint-plugin-vue'
 import globals from 'globals';
 import tseslint from 'typescript-eslint';
 
