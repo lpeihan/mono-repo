@@ -3,13 +3,9 @@ import type { CSSProperties } from 'vue';
 import { computed } from 'vue';
 
 export interface SvgIconProps {
-  /** 图标名称 */
   name: string;
-  /** 图标前缀，默认为 'icon' */
   prefix?: string;
-  /** 图标颜色，默认继承父元素颜色 */
   color?: string;
-  /** 图标大小，默认 1em */
   size?: string | number;
 }
 

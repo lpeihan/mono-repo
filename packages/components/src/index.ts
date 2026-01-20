@@ -1,12 +1,14 @@
-// SvgIcon 组件
-// 统一导出所有组件
-import SvgIcon from './SvgIcon';
+import type { App, Plugin } from 'vue';
 
-export { SvgIcon, default as SvgIconDefault } from './SvgIcon';
+export { SvgIcon } from './SvgIcon';
 export type { SvgIconProps } from './SvgIcon';
 
-export const components = {
-  SvgIcon,
+import SvgIcon from './SvgIcon';
+
+export const ComponentsPlugin: Plugin = {
+  install(app: App) {
+    app.component('SvgIcon', SvgIcon);
+  },
 };
 
-export default components;
+export default ComponentsPlugin;

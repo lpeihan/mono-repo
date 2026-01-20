@@ -39,9 +39,9 @@ export default defineConfig({
               test: /node_modules/,
               name: 'vendors',
             },
-          ]
-        }
-      }
-    }
-  }
+          ],
+        },
+      },
+    },
+  },
 });
