@@ -103,7 +103,6 @@ const handleSelect = ({ key }) => {
 </script>
 
 <style scoped>
-
 .ant-menu.ant-menu-dark {
   background: var(--colorBgContainer);
 }

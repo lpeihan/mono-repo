@@ -78,12 +78,20 @@ function setupLocale() {
 
 export const i18n = setupLocale();
 
-async function loadLocaleMessages(locale) {
-  try {
-    return await import(`./${locale}.ts`);
-  } catch {
-    return await import(`./${DEFAULT_LANG}.ts`);
+const localeModules = import.meta.glob<{ default: Record<string, string> }>('./*.ts', {
+  eager: false,
+});
+
+async function loadLocaleMessages(locale: string) {
+  const modulePath = `./${locale}.ts`;
+  const loader = localeModules[modulePath];
+
+  if (loader) {
+    return await loader();
   }
+
+  const defaultLoader = localeModules[`./${DEFAULT_LANG}.ts`];
+  return await defaultLoader();
 }
 
 async function setLocale(locale) {

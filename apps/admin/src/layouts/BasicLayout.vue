@@ -41,13 +41,13 @@ const handleCollapse = () => {
 </script>
 
 <style lang="less" scoped>
-  .basic-layout {
-    .ant-layout-sider {
-      border-right: 1px solid var(--colorBorderSecondary);
-    }
-  
-    .ant-layout-sider-dark {
-      background: var(--colorBgContainer);
-    }
+.basic-layout {
+  .ant-layout-sider {
+    border-right: 1px solid var(--colorBorderSecondary);
   }
-  </style>
+
+  .ant-layout-sider-dark {
+    background: var(--colorBgContainer);
+  }
+}
+</style>
