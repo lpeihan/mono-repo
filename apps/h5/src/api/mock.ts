@@ -1,4 +1,4 @@
-import { request } from '@/app/utils';
+import { request } from '../utils/request';
 
 export function mockLogin(data) {
   return request({

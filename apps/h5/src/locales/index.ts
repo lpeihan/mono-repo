@@ -1,7 +1,9 @@
 import { Locale } from 'vant';
+import VantEnUS from 'vant/es/locale/lang/en-US';
+import VantZhCN from 'vant/es/locale/lang/zh-CN';
 import { createI18n } from 'vue-i18n';
 
-import { storage } from '../utils';
+import { storage } from '../utils/storage';
 
 import zhCN from './zh-CN';
 
@@ -31,6 +33,10 @@ function getLocale() {
   return storage.get('locale') || userLocale?.value || DEFAULT_LANG;
 }
 
+const localeModules = import.meta.glob<{ default: Record<string, string> }>('./*.ts', {
+  eager: false,
+});
+
 function setupLocale() {
   const locale = getLocale();
 
@@ -50,18 +56,22 @@ function setupLocale() {
 
 export const i18n = setupLocale();
 
-async function loadLocaleMessages(locale) {
-  try {
-    return await import(`./${locale}.ts`);
-  } catch {
-    return await import(`./${DEFAULT_LANG}.ts`);
+async function loadLocaleMessages(locale: string) {
+  const modulePath = `./${locale}.ts`;
+  const loader = localeModules[modulePath];
+
+  if (loader) {
+    return await loader();
   }
+
+  const defaultLoader = localeModules[`./${DEFAULT_LANG}.ts`];
+  return await defaultLoader();
 }
 
 function setVantLocale(locale) {
   const vantLocales = {
-    'zh-CN': require('vant/es/locale/lang/zh-CN').default,
-    'en-US': require('vant/es/locale/lang/en-US').default,
+    'zh-CN': VantZhCN,
+    'en-US': VantEnUS,
   };
 
   Locale.use(locale, vantLocales[locale] || vantLocales['en-US']);
