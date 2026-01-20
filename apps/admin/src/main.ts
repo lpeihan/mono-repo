@@ -1,8 +1,23 @@
+import Antd from 'ant-design-vue';
+import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 
 import App from './App.vue';
-import './style.css';
+import { i18n } from './locales';
+import { router } from './router';
+import { useThemeStore } from './stores';
 
-import 'virtual:svg-icons-register';
+import 'ant-design-vue/dist/reset.css';
+import './styles/index.less';
+import './styles/tailwind.css';
 
-createApp(App).mount('#app');
+const pinia = createPinia();
+const app = createApp(App);
+
+app.use(Antd).use(i18n).use(pinia).use(router);
+
+const themeStore = useThemeStore();
+themeStore.initTheme();
+themeStore.initColorPrimary();
+
+app.mount('#app');
