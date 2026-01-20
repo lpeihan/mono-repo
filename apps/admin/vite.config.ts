@@ -6,6 +6,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import { defineConfig } from 'vite';
 import { viteMockServe } from 'vite-plugin-mock';
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons';
+import viteZip from 'vite-plugin-zip-pack';
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -20,6 +21,11 @@ export default defineConfig({
     viteMockServe({
       mockPath: 'mock',
       enable: true,
+    }),
+    viteZip({
+      inDir: 'dist',
+      outDir: '.',
+      outFileName: 'dist.zip',
     }),
   ],
   resolve: {
