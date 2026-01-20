@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { computed, type CSSProperties } from 'vue'
+import type { CSSProperties } from 'vue'
+import { computed } from 'vue'
 
 export interface SvgIconProps {
   /** 图标名称 */
@@ -15,7 +16,7 @@ export interface SvgIconProps {
 const props = withDefaults(defineProps<SvgIconProps>(), {
   prefix: 'icon',
   color: 'currentColor',
-  size: '1em'
+  size: '1em',
 })
 
 const symbolId = computed(() => `#${props.prefix}-${props.name}`)
@@ -30,7 +31,7 @@ const iconSize = computed(() => {
 const iconStyle = computed<CSSProperties>(() => ({
   width: iconSize.value,
   height: iconSize.value,
-  color: props.color
+  color: props.color,
 }))
 </script>
 

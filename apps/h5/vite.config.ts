@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
-import vue from '@vitejs/plugin-vue'
-import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 import path from 'node:path'
+import vue from '@vitejs/plugin-vue'
+import { defineConfig } from 'vite'
+import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -16,5 +16,5 @@ export default defineConfig({
   ],
   server: {
     port: 6001,
-  }
+  },
 })
