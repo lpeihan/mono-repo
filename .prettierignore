@@ -3,3 +3,6 @@ dist
 public
 .DS_Store
 pnpm-lock.yaml
+pnpm-debug.log*
+
+.turbo

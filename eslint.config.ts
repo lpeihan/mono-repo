@@ -9,7 +9,7 @@ import tseslint from 'typescript-eslint';
 export default defineConfig([
   importPlugin.flatConfigs.recommended,
   {
-    ignores: ['**/node_modules/**', '**/dist/**', '**/public/**', '**/.DS_Store'],
+    ignores: ['**/node_modules/**', '**/dist/**', '**/public/**', '**/.DS_Store', '**/.turbo'],
   },
   tseslint.configs.recommended,
   {

@@ -7,7 +7,7 @@ import SvgIcon from './SvgIcon';
 
 export const ComponentsPlugin: Plugin = {
   install(app: App) {
-    app.component('SvgIcon', SvgIcon)
+    app.component('SvgIcon', SvgIcon);
   },
 };
 
