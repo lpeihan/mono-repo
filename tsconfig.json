@@ -19,5 +19,6 @@
     "noImplicitAny": false,
     "strictNullChecks": false,
     "useUnknownInCatchVariables": false
-  }
+  },
+  "exclude": ["**/node_modules", "**/dist", "**/public"]
 }
