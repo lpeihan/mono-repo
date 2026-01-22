@@ -8,9 +8,3 @@ interface ImportMetaEnv {
 interface ImportMeta {
   readonly env: ImportMetaEnv;
 }
-
-declare module 'axios' {
-  interface AxiosRequestConfig {
-    showError?: boolean;
-  }
-}
