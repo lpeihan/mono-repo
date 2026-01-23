@@ -10,6 +10,7 @@ import viteZip from 'vite-plugin-zip-pack';
 
 // https://vite.dev/config/
 export default defineConfig({
+  envPrefix: 'ENV_',
   plugins: [
     vue(),
     tailwindcss(),

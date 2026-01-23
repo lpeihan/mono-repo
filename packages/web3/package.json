@@ -15,13 +15,8 @@
     "build": "tsc",
     "dev": "tsc --watch"
   },
-  "devDependencies": {
-    "typescript": "^5.9.3"
-  },
   "dependencies": {
-    "clsx": "^2.1.1",
     "decimal.js": "^10.6.0",
-    "tailwind-merge": "^3.4.0",
     "web3": "^4.16.0"
   }
 }

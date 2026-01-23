@@ -267,9 +267,6 @@ importers:
         specifier: workspace:*
         version: link:../utils
     devDependencies:
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
       vue:
         specifier: ^3.5.24
         version: 3.5.27(typescript@5.9.3)
@@ -285,29 +282,15 @@ importers:
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
-    devDependencies:
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
 
   packages/web3:
     dependencies:
-      clsx:
-        specifier: ^2.1.1
-        version: 2.1.1
       decimal.js:
         specifier: ^10.6.0
         version: 10.6.0
-      tailwind-merge:
-        specifier: ^3.4.0
-        version: 3.4.0
       web3:
         specifier: ^4.16.0
         version: 4.16.0(typescript@5.9.3)(zod@3.25.76)
-    devDependencies:
-      typescript:
-        specifier: ^5.9.3
-        version: 5.9.3
 
 packages:
 
