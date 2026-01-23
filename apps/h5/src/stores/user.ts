@@ -1,3 +1,4 @@
+import { connectWallet } from '@mono/web3';
 import { defineStore } from 'pinia';
 
 import { useStorage } from '../hooks';
@@ -10,8 +11,8 @@ export const useUserStore = defineStore('user', {
   }),
   actions: {
     async login() {
-      // const walletAddress = await web3.connectWallet();
-      // this.walletAddress = walletAddress;
+      const walletAddress = await connectWallet();
+      this.walletAddress = walletAddress;
     },
     setWalletAddress(walletAddress) {
       this.walletAddress = walletAddress;
