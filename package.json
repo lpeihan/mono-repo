@@ -10,6 +10,7 @@
   "scripts": {
     "dev": "turbo run dev",
     "build": "turbo run build",
+    "build:prod": "turbo run build:prod",
     "preview": "turbo run preview",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
