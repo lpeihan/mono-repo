@@ -7,7 +7,9 @@
     "dev": "vite --mode lab",
     "build": "vue-tsc --noEmit && vite build --mode lab",
     "build:production": "vue-tsc --noEmit && vite build --mode production",
-    "preview": "vite preview --mode lab"
+    "preview": "vite preview --mode lab",
+    "deploy": "pnpm run build && mode=lab scripts/deploy.sh",
+    "deploy:production": "pnpm run build:production && mode=production scripts/deploy.sh"
   },
   "dependencies": {
     "@mono/components": "workspace:*",
