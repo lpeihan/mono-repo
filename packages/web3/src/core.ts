@@ -1,6 +1,6 @@
 import Web3 from 'web3';
 
-import UsdtAbi from './abi/usdt.json';
+import { UsdtAbi } from './abi';
 
 const configs = {
   production: {
@@ -17,34 +17,33 @@ const configs = {
 
 // @ts-ignore
 export const config = configs[import.meta?.env?.MODE || 'lab'];
+
 export let walletAddress: string | undefined;
 export let web3: Web3 | undefined;
 
-export async function connectWallet() {
-  if (window.ethereum) {
-    try {
-      const accounts = await window.ethereum.request({
-        method: 'eth_requestAccounts',
-      });
+export async function connectWallet(): Promise<string> {
+  if (!window.ethereum) {
+    throw new Error('Ethereum wallet is not installed');
+  }
 
-      walletAddress = accounts[0];
-      console.log('🚀 ~ connectWallet ~ walletAddress:', walletAddress);
+  try {
+    const accounts = await window.ethereum.request({
+      method: 'eth_requestAccounts',
+    });
 
-      web3 = new Web3(window.ethereum);
+    walletAddress = accounts[0];
+    console.log('🚀 ~ connectWallet ~ walletAddress:', walletAddress);
 
-      return walletAddress;
-    } catch (error) {
-      console.error('🚀 ~ connectWallet ~ error:', error);
-      throw error;
-    }
-  } else {
-    const errorMessage = 'Ethereum wallet is not installed';
+    web3 = new Web3(window.ethereum);
 
-    throw new Error(errorMessage);
+    return walletAddress;
+  } catch (error) {
+    console.error('🚀 ~ connectWallet ~ error:', error);
+    throw error;
   }
 }
 
-export async function disconnectWallet() {
+export async function disconnectWallet(): Promise<void> {
   if (window.ethereum && window.ethereum.request) {
     try {
       await window.ethereum.request({
