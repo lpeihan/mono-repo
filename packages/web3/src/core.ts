@@ -1,18 +1,22 @@
-import Decimal from 'decimal.js';
 import Web3 from 'web3';
 
-import { config } from './config';
+import UsdtAbi from './abi/usdt.json';
 
-Decimal.set({ toExpNeg: -100, toExpPos: 100 });
-
-export const movePointRight = (value, point) => {
-  return new Decimal(value).times(new Decimal(10).pow(point)).toString();
+const configs = {
+  production: {
+    UsdtAbi,
+    UsdtAddress: '0x55d398326f99059fF775485246999027B3197955',
+    UsdtDecimals: 18,
+  },
+  lab: {
+    UsdtAbi,
+    UsdtAddress: '0x6Dd88E5e3CcC83Ca71A17A77aC552b447481504e',
+    UsdtDecimals: 6,
+  },
 };
 
-export const movePointLeft = (value, point) => {
-  return new Decimal(value).div(new Decimal(10).pow(point)).toString();
-};
-
+// @ts-ignore
+export const config = configs[import.meta?.env?.MODE || 'lab'];
 export let walletAddress: string | undefined;
 export let web3: Web3 | undefined;
 
@@ -31,7 +35,7 @@ export async function connectWallet() {
       return walletAddress;
     } catch (error) {
       console.error('🚀 ~ connectWallet ~ error:', error);
-      throw new Error(error);
+      throw error;
     }
   } else {
     const errorMessage = 'Ethereum wallet is not installed';
@@ -57,11 +61,3 @@ export async function disconnectWallet() {
   console.log('🚀 ~ disconnectWallet ~ wallet disconnected');
 }
 
-export async function getUsdtBalance() {
-  const contract = new web3.eth.Contract(config.UsdtAbi, config.UsdtAddress, {
-    from: walletAddress,
-  });
-  const balance = await contract.methods.balanceOf(walletAddress).call({ from: walletAddress });
-
-  return balance;
-}

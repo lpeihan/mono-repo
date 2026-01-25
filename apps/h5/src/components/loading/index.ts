@@ -1,5 +1,7 @@
 import { createApp } from 'vue';
 
+import Loading from './Loading.vue';
+
 let root;
 let app;
 let instance;
@@ -12,7 +14,7 @@ const loading = (message = '') => {
     document.body.appendChild(root);
   }
 
-  app = createApp(require('./Loading.vue').default, {
+  app = createApp(Loading, {
     message,
     destroy() {
       if (app) {

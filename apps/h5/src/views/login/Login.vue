@@ -29,6 +29,7 @@ const handleConnect = async () => {
 
     router.push('/');
   } catch (error) {
+    console.error(error);
     showToast(error.message);
   } finally {
     closeLoading();
