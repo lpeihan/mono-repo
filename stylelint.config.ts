@@ -15,6 +15,7 @@ const config: Config = {
     'custom-property-pattern': null,
     'at-rule-no-deprecated': null,
     'at-rule-no-unknown': null,
+    'import-notation': null,
   },
 };
 
