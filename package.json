@@ -24,6 +24,8 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "@commitlint/cli": "^20.3.1",
+    "@commitlint/config-conventional": "^20.3.1",
     "@eslint/js": "^9.26.0",
     "@faker-js/faker": "^10.2.0",
     "@types/node": "^25.0.9",
