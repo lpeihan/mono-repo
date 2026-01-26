@@ -20,7 +20,8 @@
     "deploy:h5": "turbo run deploy --filter=h5",
     "deploy:admin": "turbo run deploy --filter=admin",
     "deploy:h5:production": "turbo run deploy:production --filter=h5",
-    "deploy:admin:production": "turbo run deploy:production --filter=admin"
+    "deploy:admin:production": "turbo run deploy:production --filter=admin",
+    "prepare": "husky"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
@@ -33,6 +34,8 @@
     "eslint-plugin-import": "^2.31.0",
     "eslint-plugin-vue": "^10.1.0",
     "globals": "^17.0.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^16.2.7",
     "prettier": "^3.5.3",
     "prettier-plugin-tailwindcss": "^0.6.12",
     "stylelint": "^16.19.1",
