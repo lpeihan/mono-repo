@@ -49,7 +49,7 @@ export default [
       const pageSize = Number(query.pageSize) || 10;
 
       return {
-        code: 200,
+        code: CODE_SUCCESS,
         data: {
           list: Array.from({ length: pageSize }, () => getUserData()),
           total: 100,
