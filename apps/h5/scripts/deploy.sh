@@ -1,5 +1,7 @@
 #!/bin/bash
 
+START_TIME=$(date +%s)
+
 MODE=${mode}
 DIST_ZIP_NAME="dist.zip"
 REMOTE_USER="root"
@@ -77,4 +79,11 @@ fi
 
 rm -f "$TEMP_KEY_FILE"
 
-log_success "deployed to $REMOTE_HOST:$DEPLOY_PATH $MODE successfully"
+END_TIME=$(date +%s)
+DURATION=$((END_TIME - START_TIME))
+DEPLOY_TIME=$(date '+%Y-%m-%d %H:%M:%S')
+
+log_success "deployed dir: $REMOTE_HOST:$DEPLOY_PATH"
+log_success "deploy mode: $MODE"
+log_success "deployed time: $DEPLOY_TIME"
+log_success "deployed duration: ${DURATION} seconds"

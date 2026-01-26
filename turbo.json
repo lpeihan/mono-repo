@@ -10,10 +10,12 @@
       "outputs": ["dist/**"]
     },
     "deploy": {
-      "dependsOn": ["build"]
+      "dependsOn": ["build"],
+      "cache": false
     },
     "deploy:production": {
-      "dependsOn": ["build:production"]
+      "dependsOn": ["build:production"],
+      "cache": false
     },
     "dev": {
       "cache": false,
