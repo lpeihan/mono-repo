@@ -1,10 +1,12 @@
-export default {
+import type { Config } from 'stylelint';
+
+const config: Config = {
   extends: [
-    'stylelint-config-standard-less',
+    'stylelint-config-standard',
     'stylelint-config-recess-order',
-    'stylelint-config-standard-vue',
+    'stylelint-config-recommended-vue',
   ],
-  ignoreFiles: ['**/node_modules/**/*', '**/dist/**/*', '**/public/**/*'],
+  ignoreFiles: ['**/node_modules/**', '**/dist/**', '**/public/**'],
   rules: {
     'no-descending-specificity': null,
     'selector-class-pattern': null,
@@ -15,3 +17,5 @@ export default {
     'at-rule-no-unknown': null,
   },
 };
+
+export default config;
