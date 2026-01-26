@@ -16,7 +16,11 @@
     "lint:fix": "eslint . --fix",
     "prettier": "prettier --write .",
     "cspell": "cspell .",
-    "stylelint": "stylelint --fix '**/*.{less,css,vue}'"
+    "stylelint": "stylelint --fix '**/*.{less,css,vue}'",
+    "deploy:h5": "turbo run deploy --filter=@mono/h5",
+    "deploy:admin": "turbo run deploy --filter=@mono/admin",
+    "deploy:h5:production": "turbo run deploy:production --filter=@mono/h5",
+    "deploy:admin:production": "turbo run deploy:production --filter=@mono/admin"
   },
   "devDependencies": {
     "@eslint/js": "^9.26.0",
