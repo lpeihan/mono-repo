@@ -1,4 +1,4 @@
-import GlobalComponentsPlugin from '@mono/components';
+import GlobalComponentsPlugin from '@packages/components';
 import { createPinia } from 'pinia';
 import { createApp } from 'vue';
 

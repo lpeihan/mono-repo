@@ -1,5 +1,5 @@
 {
-  "name": "@mono/h5",
+  "name": "h5",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -12,9 +12,9 @@
     "deploy:production": "pnpm run build:production && mode=production scripts/deploy.sh"
   },
   "dependencies": {
-    "@mono/components": "workspace:*",
-    "@mono/utils": "workspace:*",
-    "@mono/web3": "workspace:*",
+    "@packages/components": "workspace:*",
+    "@packages/utils": "workspace:*",
+    "@packages/web3": "workspace:*",
     "@tailwindcss/postcss": "^4.1.18",
     "@vant/touch-emulator": "^1.5.0",
     "autoprefixer": "^10.4.23",

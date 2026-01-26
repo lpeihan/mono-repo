@@ -1,5 +1,5 @@
 {
-  "name": "@mono/admin",
+  "name": "admin",
   "type": "module",
   "version": "0.0.0",
   "private": true,
@@ -12,8 +12,8 @@
     "deploy:production": "pnpm run build:production && mode=production scripts/deploy.sh"
   },
   "dependencies": {
-    "@mono/components": "workspace:*",
-    "@mono/utils": "workspace:*",
+    "@packages/components": "workspace:*",
+    "@packages/utils": "workspace:*",
     "ant-design-vue": "^4.2.6",
     "axios": "^1.13.2",
     "dayjs": "^1.11.19",

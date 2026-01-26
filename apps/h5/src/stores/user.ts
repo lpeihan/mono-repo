@@ -1,4 +1,4 @@
-import { connectWallet } from '@mono/web3';
+import { connectWallet } from '@packages/web3';
 import { defineStore } from 'pinia';
 
 import { useStorage } from '../hooks';

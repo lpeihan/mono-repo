@@ -5,7 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { cn } from '@mono/utils';
+import { cn } from '@packages/utils';
 import { computed } from 'vue';
 
 export interface SvgIconProps {

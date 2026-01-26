@@ -78,10 +78,10 @@ importers:
 
   apps/admin:
     dependencies:
-      '@mono/components':
+      '@packages/components':
         specifier: workspace:*
         version: link:../../packages/components
-      '@mono/utils':
+      '@packages/utils':
         specifier: workspace:*
         version: link:../../packages/utils
       ant-design-vue:
@@ -157,13 +157,13 @@ importers:
 
   apps/h5:
     dependencies:
-      '@mono/components':
+      '@packages/components':
         specifier: workspace:*
         version: link:../../packages/components
-      '@mono/utils':
+      '@packages/utils':
         specifier: workspace:*
         version: link:../../packages/utils
-      '@mono/web3':
+      '@packages/web3':
         specifier: workspace:*
         version: link:../../packages/web3
       '@tailwindcss/postcss':
@@ -263,7 +263,7 @@ importers:
 
   packages/components:
     dependencies:
-      '@mono/utils':
+      '@packages/utils':
         specifier: workspace:*
         version: link:../utils
     devDependencies:

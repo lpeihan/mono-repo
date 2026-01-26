@@ -1,5 +1,5 @@
 {
-  "name": "@mono/components",
+  "name": "@packages/components",
   "type": "module",
   "version": "0.0.0",
   "exports": {
@@ -22,6 +22,6 @@
     "vue-tsc": "^3.1.4"
   },
   "dependencies": {
-    "@mono/utils": "workspace:*"
+    "@packages/utils": "workspace:*"
   }
 }

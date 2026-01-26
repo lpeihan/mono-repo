@@ -1,5 +1,5 @@
 {
-  "name": "@mono/web3",
+  "name": "@packages/web3",
   "type": "module",
   "version": "0.0.0",
   "exports": {

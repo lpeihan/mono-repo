@@ -1,4 +1,4 @@
-import type { SvgIconProps } from '@mono/components';
+import type { SvgIconProps } from '@packages/components';
 
 declare module 'vue' {
   export interface GlobalComponents {

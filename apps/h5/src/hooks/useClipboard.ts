@@ -1,4 +1,4 @@
-import { copyToClipboard } from '@mono/utils';
+import { copyToClipboard } from '@packages/utils';
 import { showToast } from 'vant';
 import { useI18n } from 'vue-i18n';
 
