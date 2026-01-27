@@ -3,11 +3,11 @@
   "tasks": {
     "build": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**", "dist.zip"]
     },
     "build:production": {
       "dependsOn": ["^build"],
-      "outputs": ["dist/**"]
+      "outputs": ["dist/**", "dist.zip"]
     },
     "deploy": {
       "dependsOn": ["build"],
@@ -22,7 +22,7 @@
       "persistent": true
     },
     "preview": {
-      "dependsOn": ["build"]
+      "dependsOn": ["^build"]
     },
     "lint": {
       "dependsOn": ["^lint"]

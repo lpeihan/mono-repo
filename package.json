@@ -17,11 +17,11 @@
     "prettier": "prettier --write .",
     "cspell": "cspell .",
     "stylelint": "stylelint --fix '**/*.{less,css,vue}'",
+    "prepare": "husky",
     "deploy:h5": "turbo run deploy --filter=h5",
     "deploy:admin": "turbo run deploy --filter=admin",
     "deploy:h5:production": "turbo run deploy:production --filter=h5",
-    "deploy:admin:production": "turbo run deploy:production --filter=admin",
-    "prepare": "husky"
+    "deploy:admin:production": "turbo run deploy:production --filter=admin"
   },
   "devDependencies": {
     "@commitlint/cli": "^20.3.1",
