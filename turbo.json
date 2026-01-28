@@ -22,7 +22,9 @@
       "persistent": true
     },
     "preview": {
-      "dependsOn": ["^build"]
+      "dependsOn": ["build"],
+      "cache": false,
+      "persistent": true
     },
     "lint": {
       "dependsOn": ["^lint"]

@@ -37,6 +37,9 @@ export default defineConfig({
   server: {
     port: 6002,
   },
+  preview: {
+    port: 5002,
+  },
   build: {
     rolldownOptions: {
       output: {
