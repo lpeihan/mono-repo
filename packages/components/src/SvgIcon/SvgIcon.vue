@@ -1,5 +1,5 @@
 <template>
-  <svg :class="mergedClass" aria-hidden="true">
+  <svg :class="displayClass" aria-hidden="true">
     <use :xlink:href="symbolId" />
   </svg>
 </template>
@@ -16,5 +16,5 @@ export interface SvgIconProps {
 const props = withDefaults(defineProps<SvgIconProps>(), {});
 
 const symbolId = computed(() => `#icon-${props.name}`);
-const mergedClass = computed(() => cn('inline-block size-[16px] fill-current', props.class));
+const displayClass = computed(() => cn('inline-block size-[16px] fill-current', props.class));
 </script>
