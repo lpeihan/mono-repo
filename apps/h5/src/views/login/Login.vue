@@ -1,5 +1,11 @@
 <template>
-  <van-nav-bar :title="$t('login.title')" fixed placeholder />
+  <van-nav-bar
+    :title="$t('login.title')"
+    fixed
+    placeholder
+    left-arrow
+    @click-left="router.back()"
+  />
 
   <div class="p-4">
     <div class="py-4 text-center">
