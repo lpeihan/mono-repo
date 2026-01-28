@@ -31,7 +31,12 @@ const showModal = (component, props = {}) => {
     component: markRaw(component),
     props: {
       ...props,
+      // Ant Design Vue
       afterClose: () => {
+        modals.value = modals.value.filter((item) => item.name !== component.__name);
+      },
+      // Vant
+      onClosed: () => {
         modals.value = modals.value.filter((item) => item.name !== component.__name);
       },
     },

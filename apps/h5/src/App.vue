@@ -6,14 +6,13 @@
       </keep-alive>
     </router-view>
 
-    <ModalManager ref="modalManagerRef" />
+    <modal-manager ref="modalManagerRef" />
   </van-config-provider>
 </template>
 
 <script setup lang="ts">
 import { provide, useTemplateRef } from 'vue';
 
-import { ModalManager } from './components';
 import { useCacheRouteStore, useThemeStore } from './stores';
 
 const themeStore = useThemeStore();

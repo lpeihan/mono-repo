@@ -6,7 +6,7 @@
   >
     <router-view class="text-sm" />
 
-    <ModalManager ref="modalManagerRef" />
+    <modal-manager ref="modalManagerRef" />
   </a-config-provider>
 </template>
 
@@ -15,7 +15,6 @@ import { theme } from 'ant-design-vue';
 import { provide, reactive, useTemplateRef, watch } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-import { ModalManager } from './components';
 import { getAntdLocale } from './locales';
 import { useThemeStore } from './stores';
 import { eventBus } from './utils';
