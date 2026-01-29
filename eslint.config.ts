@@ -9,14 +9,7 @@ import tseslint from 'typescript-eslint';
 export default defineConfig([
   importPlugin.flatConfigs.recommended,
   {
-    ignores: [
-      '**/node_modules/**',
-      '**/dist/**',
-      '**/public/**',
-      '**/.DS_Store',
-      '**/.turbo',
-      'apps/server/**', // server 目录使用自己的 eslint.config.mjs
-    ],
+    ignores: ['**/node_modules/**', '**/dist/**', '**/public/**', '**/.DS_Store', '**/.turbo'],
   },
   tseslint.configs.recommended,
   {
