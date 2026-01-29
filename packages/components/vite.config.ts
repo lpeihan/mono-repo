@@ -12,6 +12,9 @@ export default defineConfig({
       outDir: 'dist',
       staticImport: true,
       insertTypesEntry: true,
+      compilerOptions: {
+        declarationMap: true,
+      },
     }),
   ],
   build: {
