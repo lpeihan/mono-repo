@@ -3,22 +3,6 @@
   "version": "0.2",
   "language": "en,en-US",
   "allowCompoundWords": true,
-  "ignorePaths": [
-    "node_modules",
-    "pnpm-lock.yaml",
-    "dist",
-    "src/locales"
-  ],
-  "words": [
-    "antd",
-    "antdv",
-    "corejs",
-    "lucide",
-    "Mdga",
-    "pxtorem",
-    "sider",
-    "unplugin",
-    "vant",
-    "VITE"
-  ]
+  "ignorePaths": ["node_modules", "pnpm-lock.yaml", "dist", "src/locales"],
+  "words": ["antd", "corejs", "lucide", "pxtorem", "unplugin", "vant", "VITE"]
 }
